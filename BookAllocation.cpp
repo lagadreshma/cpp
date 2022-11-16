@@ -41,9 +41,17 @@ int findMinimumBookAllocation(int arr[], int size, int students){
     }
 
     int end = sum;
-    int mid = start + (end - start) / 2;
+    
 
     while(start <= end){
+        
+        if(students > size){
+            
+            return -1;
+            
+        }
+        
+        int mid = start + (end - start) / 2;
 
         if(isPossible(arr, size, students, mid)){
 
@@ -55,8 +63,6 @@ int findMinimumBookAllocation(int arr[], int size, int students){
             start = mid + 1;
 
         }
-
-        mid = start + (end - start) / 2;
 
     }
 
