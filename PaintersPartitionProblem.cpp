@@ -48,7 +48,7 @@ int findPaintersPartitionProblemMinimum(int arr[], int size, int painters){
             s = mid + 1;
         }
 
-        mid = e + (s - e) / 2;
+        mid = s + (e - s) / 2;
 
     }
 
