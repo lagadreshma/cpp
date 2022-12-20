@@ -42,7 +42,8 @@ void pQueue::insert_q(int value, int p){
     temp -> next = NULL;
 
     if(isEmpty()){
-        front = rear = NULL;
+        front = rear = temp
+;
     }else if(p > front -> pri){
         temp -> next = front;
         front = temp;
